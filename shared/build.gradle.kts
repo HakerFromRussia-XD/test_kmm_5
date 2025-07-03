@@ -11,12 +11,12 @@ version = "1.0-SNAPSHOT"
 
 kotlin {
     androidTarget()
-    jvm("desktop")
-    js {
-        browser()
-        useEsModules()
-    }
-    wasmJs { browser() }
+//    jvm("desktop")
+//    js {
+//        browser()
+//        useEsModules()
+//    }
+//    wasmJs { browser() }
 
     listOf(
         iosX64(),

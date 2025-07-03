@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Surface
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import example.imageviewer.ble.BleManager
 import example.imageviewer.filter.PlatformContext
 import example.imageviewer.model.PictureData
 import example.imageviewer.storage.IosImageStorage
@@ -73,4 +74,6 @@ fun getDependencies(ioScope: CoroutineScope, toastState: MutableState<ToastState
                 }
             }
         }
+        override val bleManager: BleManager
+            get() = TODO("Not yet implemented")
     }

@@ -13,6 +13,7 @@ import example.imageviewer.ImageViewerCommon
 import example.imageviewer.Notification
 import example.imageviewer.PopupNotification
 import example.imageviewer.SharePicture
+import example.imageviewer.ble.BleManager
 import example.imageviewer.filter.PlatformContext
 import example.imageviewer.ioDispatcher
 import example.imageviewer.model.PictureData
@@ -70,5 +71,7 @@ private fun getDependencies(
             }
         }
     }
+    override val bleManager: BleManager
+        get() = TODO("Not yet implemented")
     override val externalEvents: Flow<ExternalImageViewerEvent> = externalEvents
 }
