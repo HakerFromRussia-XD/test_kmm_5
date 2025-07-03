@@ -13,6 +13,7 @@ import example.imageviewer.view.Toast
 import example.imageviewer.view.ToastState
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import platform.UIKit.UIActivityViewController
@@ -74,6 +75,5 @@ fun getDependencies(ioScope: CoroutineScope, toastState: MutableState<ToastState
                 }
             }
         }
-        override val bleManager: BleManager
-            get() = TODO("Not yet implemented")
+        override val bleManager: BleManager = BleManager()
     }

@@ -71,7 +71,6 @@ private fun getDependencies(
             }
         }
     }
-    override val bleManager: BleManager
-        get() = TODO("Not yet implemented")
+    override val bleManager: BleManager = BleManager()
     override val externalEvents: Flow<ExternalImageViewerEvent> = externalEvents
 }
