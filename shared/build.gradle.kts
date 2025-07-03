@@ -62,31 +62,31 @@ kotlin {
             implementation("com.google.maps.android:maps-compose:2.11.2")
         }
 
-        val jsWasmMain by creating {
-            dependsOn(commonMain.get())
-            dependencies {
-                implementation(npm("uuid", "^9.0.1"))
-            }
-        }
+//        val jsWasmMain by creating {
+//            dependsOn(commonMain.get())
+//            dependencies {
+//                implementation(npm("uuid", "^9.0.1"))
+//            }
+//        }
 
-        val jsMain by getting {
-            dependsOn(jsWasmMain)
-        }
+//        val jsMain by getting {
+//            dependsOn(jsWasmMain)
+//        }
 
-        val wasmJsMain by getting {
-            dependsOn(jsWasmMain)
-        }
+//        val wasmJsMain by getting {
+//            dependsOn(jsWasmMain)
+//        }
 
-        val desktopMain by getting
-        desktopMain.dependencies {
-            implementation(compose.desktop.common)
-            implementation(project(":mapview-desktop"))
-        }
-        val desktopTest by getting
-        desktopTest.dependencies {
-            implementation(compose.desktop.currentOs)
-            implementation(compose.desktop.uiTestJUnit4)
-        }
+//        val desktopMain by getting
+//        desktopMain.dependencies {
+//            implementation(compose.desktop.common)
+//            implementation(project(":mapview-desktop"))
+//        }
+//        val desktopTest by getting
+//        desktopTest.dependencies {
+//            implementation(compose.desktop.currentOs)
+//            implementation(compose.desktop.uiTestJUnit4)
+//        }
     }
 }
 

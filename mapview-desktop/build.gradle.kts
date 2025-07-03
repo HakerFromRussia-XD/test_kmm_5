@@ -17,11 +17,11 @@ kotlin {
                 implementation(compose.foundation)
             }
         }
-        val desktopMain by getting {
-            dependencies {
-                implementation("io.ktor:ktor-client-cio:2.2.1")
-                implementation(compose.desktop.common)
-            }
-        }
+//        val desktopMain by getting {
+//            dependencies {
+//                implementation("io.ktor:ktor-client-cio:2.2.1")
+//                implementation(compose.desktop.common)
+//            }
+//        }
     }
 }

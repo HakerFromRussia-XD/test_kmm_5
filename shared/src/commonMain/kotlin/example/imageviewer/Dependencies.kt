@@ -4,6 +4,7 @@ import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.ImageBitmap
+import example.imageviewer.ble.BleManager
 import example.imageviewer.filter.PlatformContext
 import example.imageviewer.model.PictureData
 import imageviewer.shared.generated.resources.Res
@@ -14,6 +15,7 @@ abstract class Dependencies {
     abstract val notification: Notification
     abstract val imageStorage: ImageStorage
     abstract val sharePicture: SharePicture
+    abstract val bleManager: BleManager
     val pictures: SnapshotStateList<PictureData> = mutableStateListOf(*resourcePictures)
     open val externalEvents: Flow<ExternalImageViewerEvent> = emptyFlow()
     val localization: Localization = getCurrentLocalization()
