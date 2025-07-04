@@ -28,7 +28,7 @@ struct ContentView: View {
                         .cornerRadius(10)
                 }
                 .padding(.horizontal)
-                .padding(.bottom, 32)
+                .padding(.bottom, 48)
             }
         }.preferredColorScheme(.dark)
     }
