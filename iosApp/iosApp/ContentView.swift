@@ -3,6 +3,7 @@ import SwiftUI
 import shared
 
 struct ContentView: View {
+    private let bleManager = BleManager()
     var body: some View {
         ZStack {
             ComposeView()
@@ -13,6 +14,10 @@ struct ContentView: View {
                 
                 Button(action: {
                     // запуск сканирования BLE
+                    print("tup ble connect")
+                    bleManager.startScan { BleDevice in
+                        print("МЫ НАШЛИ УСТРОЙСТВО \(BleDevice.name)!!!")
+                    }
                 }) {
                     Text("ble connect")
                         .font(.headline)
