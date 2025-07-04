@@ -10,6 +10,20 @@ struct ContentView: View {
             VStack {
                 gradient.ignoresSafeArea(edges: .top).frame(height: 0)
                 Spacer()
+                
+                Button(action: {
+                    // запуск сканирования BLE
+                }) {
+                    Text("ble connect")
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding(.horizontal)
+                .padding(.bottom, 32)
             }
         }.preferredColorScheme(.dark)
     }
