@@ -98,6 +98,7 @@ actual class BleManager {
     private val manager = CBCentralManager(delegate, queue = null)
 
     actual fun startScan(onDeviceFound: (BleDevice) -> Unit) {
+        println("startScan from kmm")
         onDeviceCallback = onDeviceFound
 //        manager.scanForPeripheralsWithServices(null, null)
         if (manager.state == CBManagerStatePoweredOn) {
